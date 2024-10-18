@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #dac6ec 100%);
+}
+a{
+    text-decoration: none;
+}
+.header_container{
+    margin-bottom:2.8rem;
+}
+.header_title{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.header_description{
+    max-width: 510px;
+    text-align: center;
+    color: rgb(109, 109, 109); 
+    margin: 0 auto; 
+}
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:repeat(auto-fit,minmax(350px,400px));
+    justify-content: center;
+}
+/* @media (min-width:753px){
+    .main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:1380px){
+    .main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1600px){
+    .main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+} */
+.card_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    border-radius: 5px;
+}
+.card_img_container{
+    position: relative;
+    overflow: hidden;
+    height:7rem;
+}
+@media (min-width: 768px){
+    
+    .card_img_container{
+        height:12rem;
+    }
+}
+.cardimg{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius:  5px;
+    border-top-right-radius: 5px;
+}
+.card_title_container{
+    display: flex;
+    flex-direction: column;
+    padding:  0 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.card_container:hover .cardimg{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(40, 39, 39);
+    margin-bottom: 0.2rem;
+}
+.card_title:hover{
+    color: rgb(41, 37, 243);
+}
+.card_desc{
+    color: rgb(118, 118, 118);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: flex-end  ;
+}
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border:1px solid rgb(171, 159, 159);
+    border-radius: 50%;
+    background-color:rgb(174, 169, 169) ;
+}
+.author_avatar{
+    height: 2.5rem;
+    height: 2.5rem;
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.2rem;
+}
+.author_name{
+    color: rgb(33, 9, 218);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.date_published{
+    color: rgb(148, 146, 146);
+}
+.card_tag_conatainer{
+    border: 1px solid rgb(183, 183, 183);
+    font-size: 1rem;
+    border-radius: 2px;
+    line-height: 1.3rem;
+    padding-right: 0.5rem;
+    height: fit-content;
+    padding-left: 0.5rem;
+    color: grey;
+}
+.author_avatar_container:hover .author_avatar{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+.foot{
+    margin-top: 1.5rem;
+    text-align: center;
+    background-color: antiquewhite;
+    height: 2rem;
+    width: 100%;
+    border-radius: 5px; 
+
+}
+.Copyright{
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(160, 170, 167);
+  font-style:normal;
+}
+marquee {
+    margin-top: 5px;
+}
+@media (max-width:400px) {
+    .cardimg{
+        
+        object-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius:  5px;
+        border-top-right-radius: 5px;
+        padding: 2vw;
+        border-radius: 10px;
+    }
+    .card_img_container{
+        height: 50vmax;
+        border-radius: 5px;
+        width: 100%;
+        overflow: hidden;
+        
+    }
+    .card_container{
+        height:70vmax;
+        border: 2px solid rgba(168, 165, 165, 0.463);
+    }
+    .container{
+        width: 100%;
+    }
+    
+    .foot marquee p{
+        width: 100%;
+    }
+    .card_title{
+        margin-top: 2vw;
+    }
+    .card_des{
+        margin-top: 20vw;
+    }
+    .card_title_container{
+        height: 30vw;
+    }
+
+}
+  
